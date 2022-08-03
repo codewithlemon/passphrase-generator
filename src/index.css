@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #e2e8f0;
+  color: #1e293b;
+  font-family: Rubik;
+}
+
+button {
+}
+
+.App {
+  width: min(90%, 32rem);
+  margin-inline: auto;
+}
+
+.app-box {
+  margin-top: 4rem;
+  padding-block: 1.25rem;
+  padding-inline: 1.75rem;
+  background-color: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -4px rgb(0, 0, 0, 0.1);
+}
+
+.app-box .app-name {
+  text-align: center;
+  margin-block: 0;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.app-box .app-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.app-box .app-buttons label {
+  margin-right: 0.5rem;
+}
+
+.app-box .app-button {
+  border: none;
+  background-color: #1e293b;
+  color: white;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  transition-property: background-color;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 500;
+  font-size: 1rem;
+  font-family: Roboto;
+  font-weight: 500;
+}
+
+.app-box .app-button:hover {
+  background-color: #334155;
+}
+
+.app-box .app-number-input > input {
+  border: 1px solid #cbd5e1;
+  width: 4rem;
+  color: #1e293b;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+}
+
+.app-box .app-number-input > input:focus {
+  border: 1px solid #60a5fa;
+  box-shadow: 0px 0px 0px 3px rgb(147, 197, 253, 0.4);
+  outline: none;
+}
+
+@media only screen and (max-width: 24rem) {
+  .app-box .app-buttons {
+    display: grid;
+    justify-content: normal;
+    gap: 0.5rem;
+  }
+
+  .app-box .app-button {
+    display: block;
+    width: 100%;
+  }
+
+  .app-box .app-number-input {
+    text-align: center;
+  }
+}
+
+.app-credits {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0.5rem;
+}
+
+.app-credits .github-link {
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.75rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  color: #1e293b;
+  font-family: Roboto;
+  transition-property: background-color, color;
+  transition-duration: 200ms;
+}
+
+.app-credits .github-link:hover {
+  color: white;
+  background-color: #1e293b;
+}
+
+.app-credits .github-link .logo {
+  font-size: 2rem;
+}
+
+.GeneratedPassphrase {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.words-box {
+  list-style-type: none;
+  padding-left: 0;
+  margin-block: 0;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  gap: 0.5rem;
+  padding-block: 0.75rem;
+  padding-inline: 1rem;
+  border-radius: 0.75rem;
+  background-color: #4b5563;
+  color: white;
+  font-weight: 400;
+}
+
+.words-box > li {
+  display: inline;
+}
