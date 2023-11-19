@@ -1,13 +1,13 @@
-import { useState, useRef } from "react"
+import { useState } from "react"
 import GeneratedPassphrase from "./components/GeneratedPassphrase"
 import getRandomWords from "./utils/getRandomWords"
 
 function App() {
-  const passphraseWordCount = useRef(5)
+  const [passphraseWordCount, setPassphraseWordCount] = useState(5)
   const [generatedPassphrase, setGeneratedPassphrase] = useState(null)
 
   function handleGenerateButton() {
-    setGeneratedPassphrase(getRandomWords(passphraseWordCount.current))
+    setGeneratedPassphrase(getRandomWords(passphraseWordCount))
   }
 
   function copyToClipboard() {
@@ -27,11 +27,9 @@ function App() {
             <input
               type="number"
               min="4"
-              defaultValue={passphraseWordCount.current}
+              value={passphraseWordCount}
               max="12"
-              onChange={(e) =>
-                (passphraseWordCount.current = parseInt(e.target.value))
-              }
+              onChange={(e) => setPassphraseWordCount(parseInt(e.target.value))}
             />
           </div>
           <button
